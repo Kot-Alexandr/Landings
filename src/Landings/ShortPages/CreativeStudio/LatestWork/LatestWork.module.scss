@@ -1,0 +1,64 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.LWBG {
+    background-color: $firstMainBackGroundColor;
+    min-height: 100vh;
+    @include flexy (center, '');
+    
+
+    .LWBox {
+        width: 60%;
+        @include flexy (center, '');
+        margin-top: 5vh;
+        flex-wrap: wrap;
+        @media screen and (max-width:1100px) {
+            min-height: 60vh;
+            width: 90%;
+        }
+    }
+}
+
+.LWHeadline {
+    @include text(48px, 'Oswald', $mainHeadlineTextColor, normal);
+    margin-bottom: 20px;
+    @media screen and (max-width:450px) {
+        @include text(32px, 'Oswald', $mainHeadlineTextColor, normal);
+        margin-bottom: 5px;
+    }
+
+    &::after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background: $mainHeadlineTextColor;
+    }
+}
+
+.LWProps {
+    display: flex;
+    .LWActiveClass {
+        @include text(12px, 'Oswald', $mainHeadlineTextColor, normal);
+        margin-right: 20px;
+        @media screen and (max-width:450px) {
+            @include text(8px, 'Oswald', $mainHeadlineTextColor, normal);
+            margin-right: 5px;
+        }
+    }
+    
+    .LWNotActiveClass{
+        @include text(12px, 'Oswald', $mainGeneralTextColor, normal);
+        margin-right: 20px;
+        @media screen and (max-width:450px) {
+            @include text(8px, 'Oswald', $mainHeadlineTextColor, normal);
+            margin-right: 5px;
+        }
+    }
+}
+
+.LWflexWrap{
+    flex-wrap: wrap;
+    margin-right: 5vh;
+}

@@ -1,0 +1,51 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.FooterBox {
+    min-height: 20vh;
+    @include flexy (center, center);
+    flex-direction: column;
+
+    .FTopBlock {
+        background-color: #2E2E2E;
+        @include flexy (center, center);
+        width: 100%;
+        height: 15vh;
+
+        .FTopBlockContent {
+            width: 60%;
+            @include flexy (center, center);
+            flex-direction: column;
+
+            .FTopText {
+                @include text(12px, 'Oswald', $headerAndFooterTextColor, normal);
+                margin-top: 1%;
+                @media screen and (max-width:450px) {
+                    @include text(8px, 'Oswald', $headerAndFooterTextColor, normal);
+        }
+            }
+
+            .FooterImg>img {
+                margin: 10px;
+                width: 4vh;
+                height: auto;
+            }
+
+        }
+    }
+
+    .FBotBlock {
+        background-color: $mainHeadlineTextColor;
+        @include flexy (center, center);
+        width: 100%;
+        height: 5vh;
+
+        .FBotBlockContent {
+            width: 60%;
+            @include flexy (center, center);
+            flex-direction: column;
+            @include text(8px, 'Oswald', $headerAndFooterTextColor, normal);
+        }
+    }
+
+}

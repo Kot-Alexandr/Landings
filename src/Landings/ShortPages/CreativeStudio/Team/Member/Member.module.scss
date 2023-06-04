@@ -1,0 +1,61 @@
+@import '../../assets/SASS/mixins.scss';
+@import '../../assets/SASS/variabls.scss';
+
+
+.MemberBox {
+    margin: 1vh;
+
+    .MemberImg {
+        height: 35vh;
+        width: 35vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        @include flexy (center, flex-end);
+        text-align: center;
+        transition: .5s linear;
+        filter: blur(1px);
+        &:hover .MemberCharBox {
+            opacity: 90%;
+            height: 12vh; 
+        }
+        &:hover{
+            filter: blur(0px);
+        }
+    }
+}
+
+.MemberCharBox {
+    background-color: $underLineBigTextColor;
+    width: 100%;
+    opacity: 50%;
+    height: 4vh;
+    overflow: hidden;
+    transition: .5s linear;
+
+    .MemberName {
+        @include text(16px, 'Oswald', $mainHeadlineTextColor, normal);
+
+        &::after {
+            content: '';
+            display: block;
+            position: relative;
+            left: 16vh;
+            width: 20px;
+            top: 1px;
+            height: 2px;
+            background: $mainHeadlineTextColor;
+        }
+
+        margin-top: 1vh;
+    }
+
+    .MemberPos {
+        @include text(16px, 'Oswald', $mainHeadlineTextColor, normal);
+    }
+
+    .MemberDescr {
+        @include text(12px, 'Oswald', $mainGeneralTextColor, normal);
+        margin-bottom: 2vh;
+        margin-top: 2vh;
+    }
+}

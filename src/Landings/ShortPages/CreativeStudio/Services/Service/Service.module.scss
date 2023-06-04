@@ -1,0 +1,92 @@
+@import '../../assets/SASS/mixins.scss';
+@import '../../assets/SASS/variabls.scss';
+
+.ServiceAll {
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+    margin-left: 25px;
+    position: relative;
+    text-shadow: 1px 1px 5px black, -1px -1px 5px black;
+    -webkit-transition: all .5s ease-out;
+    -moz-transition: all .5s ease-out;
+    -o-transition: all .5s ease-out;
+    -ms-transition: all .5s ease-out;
+    transition: all .5s ease-out;
+
+    &:hover {
+        text-shadow: none;
+        -webkit-transition: all .5s ease-out;
+        -moz-transition: all .5s ease-out;
+        -o-transition: all .5s ease-out;
+        -ms-transition: all .5s ease-out;
+        transition: all .5s ease-out
+    }
+
+    &:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    &::after {
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        background: $underLineOrCrossOutTextColor;
+        transition: width .5s ease 0s, left .5s ease 0s;
+        width: 20px;
+    }
+
+
+    .ServiceHead {
+        @include flexy(space-between, '');
+        margin: 15px 15px 0 15px;
+
+        .ServiceTitle {
+            @include text(32px, 'Oswald', $mainHeadlineTextColor, normal);
+            margin: 5px 0 0 5px;
+
+            &::after {
+                content: '';
+                display: block;
+                position: relative;
+                width: 20px;
+                height: 2px;
+                background: $mainHeadlineTextColor;
+            }
+        }
+
+        .ServiceImgBox {
+            margin: 5px 5px 0 0;
+            @include flexy(center, center);
+            width: 30px;
+            height: 30px;
+            background-color: $firstMainBackGroundColor;
+            border-radius: 50%;
+            border: 1px solid $firstMainBackGroundColor;
+            box-shadow: 0 0 20px 1px rgb(215, 215, 215);
+
+            .ServiceImg {
+                width: 20px;
+                height: auto;
+            }
+        }
+
+    }
+
+    .ServiceText {
+        @include text(16px, 'Oswald', $mainGeneralTextColor, normal);
+        width: 220px;
+        margin: 20px 20px 20px 20px
+    }
+
+    .ReadMe {
+        @include text(16px, 'Oswald', $mainGeneralTextColor, normal);
+        margin: 20px 0 20px 20px
+    }
+}

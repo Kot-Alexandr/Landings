@@ -1,0 +1,30 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.CommBG {
+    background-color: $headerAndFooterTextColor;
+    min-height: 50vh;
+    @include flexy (center, '');
+
+    .ComBox {
+        width: 60%;
+        margin-top: 10vh;
+    }
+}
+
+.ComSlideBox {
+    padding: 5vh 0 5vh 0;
+    background-color: $secondMainBackGroundColor;
+    @include flexy(center,center);
+    flex-direction: column;
+    text-align: center;
+    .ComText {
+        @include text(12px, 'Oswald', $mainGeneralTextColor, normal);
+        width: 60%;
+        margin-bottom: 3%;
+    }
+
+    .ComName {
+        @include text(32px, '', $mainHeadlineTextColor, normal);
+    }
+}

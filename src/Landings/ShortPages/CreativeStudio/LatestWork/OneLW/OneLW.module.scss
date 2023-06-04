@@ -1,0 +1,72 @@
+@import '../../assets/SASS/mixins.scss';
+@import '../../assets/SASS/variabls.scss';
+
+.OneLWBox {
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    position: relative;
+}
+
+.OneLWImg {
+    height: 35vh;
+    width: auto;
+    filter: contrast(80%);
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+
+.OneLWTitle {
+    @include text(32px, '', $mainHeadlineTextColor, normal);
+    position: absolute;
+    width: 35vh;
+    top: 15vh;
+    left: 5vh;
+    text-decoration: line-through $underLineOrCrossOutTextColor;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    @media screen and (max-width:450px) {
+        @include text(24px, 'Oswald', $mainHeadlineTextColor, normal);
+        left: 5px;
+    }
+}
+
+.OneLWlittleTitle {
+    @include text(16px, 'Oswald', $mainHeadlineTextColor, normal);
+    position: relative;
+    left: 10vh;
+
+    @media screen and (max-width:450px) {
+        @include text(12px, 'Oswald', $mainHeadlineTextColor, normal);
+        left: 5px;
+    }
+}
+
+.OneLWgeneralText {
+    @include text(12px, 'Oswald', $mainGeneralTextColor, normal);
+    position: relative;
+    left: 10vh;
+    width: 20vh;
+
+    @media screen and (max-width:450px) {
+        @include text(8px, 'Oswald', $mainGeneralTextColor, normal);
+        left: 5px;
+        width: 100%;
+    }
+}
+
+.isActive {
+    filter: saturate(300%);
+    text-decoration: none;
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    -ms-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+    border: 1px solid $underLineOrCrossOutTextColor;
+}

@@ -1,0 +1,33 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.TeamBG {
+    background-color: $secondMainBackGroundColor;
+    min-height: 80vh;
+    @include flexy (center, '');
+
+    .TeamBox {
+        width: 60%;
+        @include flexy (flex-start, '');
+        flex-direction: column;
+        margin-top: 5vh;
+        .TeamTitle{
+            @include text(48px, 'Oswald', $mainHeadlineTextColor, normal);
+            margin-bottom: 20px;
+        
+            &::after {
+                content: '';
+                display: block;
+                position: relative;
+                width: 20px;
+                height: 2px;
+                background: $mainHeadlineTextColor;
+            }
+        }
+        .TeamMembers{
+            @include flexy (center, '');
+            flex-wrap: wrap;
+            margin-top: 5vh;
+        }
+    }
+}

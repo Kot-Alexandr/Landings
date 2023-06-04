@@ -1,0 +1,14 @@
+@import './variabls.scss';
+
+@mixin text ($size, $font, $color, $type) {
+    font-size: $size;
+    font-family: $font;
+    color: $color;
+    font-style: $type;
+}
+
+@mixin flexy ($justi, $align) {
+    display: flex;
+    justify-content: $justi;
+    align-items: $align;
+}

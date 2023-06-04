@@ -1,0 +1,57 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.ContBox {
+    background-color: $headerAndFooterTextColor;
+    min-height: 30vh;
+    @include flexy (center, center);
+
+    .ContLeft {
+        width: 50%;
+        height: 30vh;
+        @include flexy (center, center);
+        background-color: $secondMainBackGroundColor;
+        flex-direction: column;
+
+        .ContHeadLineLeft {
+            @include text(28px, 'Oswald', $mainHeadlineTextColor, normal);
+            margin: 1.5%;
+              @media screen and (max-width:550px) {
+                @include text(14px, 'Oswald', $mainHeadlineTextColor, normal);
+    }
+        }
+        .ContTextLeft{
+           @include text(12px, 'Oswald', $mainGeneralTextColor, normal); 
+             @media screen and (max-width:550px) {
+                @include text(8px, 'Oswald', $mainGeneralTextColor, normal); 
+    }
+        }
+    }
+
+    .ContRight {
+        width: 50%;
+        height: 30vh;
+        @include flexy (center, center);
+        background-color: $additionalMainBackGroundColor;
+        flex-direction: column;
+
+        .ContHeadLineRight {
+            @include text(28px, 'Oswald', $headerAndFooterTextColor, normal);
+              @media screen and (max-width:550px) {
+                @include text(14px, 'Oswald', $headerAndFooterTextColor, normal);
+    }
+            margin: 1.5%;
+        }
+        .ContTextRight{
+           @include text(12px, 'Oswald', $headerAndFooterTextColor, normal); 
+             @media screen and (max-width:550px) {
+                @include text(8px, 'Oswald', $headerAndFooterTextColor, normal); 
+    }
+        }
+    }
+}
+
+.ContImg {
+    width: 30px;
+    height: auto;
+   }

@@ -1,0 +1,49 @@
+@import "./Landings/ShortPages/CreativeStudio/assets/SASS/mixins.scss";
+
+.MainBG {
+    @include flexy (center, center);
+
+    .MainBox {
+        @include flexy (space-around, center);
+        width: 70%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.MainHeadLineText {
+    @include text(32px, 'Fira Sans', rgb(0, 255, 0), normal);
+    text-align: center;
+    padding: 10px;
+    border: 2px solid rgb(0, 255, 0);
+    border-radius: 40px
+}
+
+.CreativeStudio {
+    @include text(24px, 'Oswald', white, normal);
+    text-decoration: none;
+    position: relative;
+    padding-bottom: 5px;
+
+    &:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    &::after {
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        background:  rgb(0, 255, 0);
+        transition: width .5s ease 0s, left .5s ease 0s;
+        width: 20px;
+    }
+}
+
+.MainLiStyle>li {
+    color: white;
+    list-style-type: none;
+}

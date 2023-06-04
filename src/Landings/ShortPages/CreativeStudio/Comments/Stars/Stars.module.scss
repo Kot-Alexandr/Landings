@@ -1,0 +1,11 @@
+@import '../../assets/SASS/mixins.scss';
+@import '../../assets/SASS/variabls.scss';
+
+.StarsBox {
+    @include flexy(center, center);
+    .StarsStar{
+        margin: 1%;
+        height: 15px;
+        width: auto;
+    }
+}

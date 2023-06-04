@@ -1,0 +1,122 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.HeaderBack {
+    background: url('../assets/img/backgroundHeaderImg.png') no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    @include flexy (center, '');
+    @media screen and (max-width:1000px) {
+        background-position: center;
+    }
+
+    .HeaderBox {
+        width: 60%;
+        display: flex;
+        flex-direction: column;
+
+        @media screen and (max-width:900px) {
+            width: 90%;
+        }
+
+    }
+}
+
+.MenuNavigate {
+    @include flexy (space-between, '');
+    margin-top: 5vh;
+    margin-bottom: 35vh;
+}
+
+.MenuBack {
+    @include text(12px, 'Oswald', $headerAndFooterTextColor, normal);
+    letter-spacing: .25em;
+    display: inline-block;
+    padding-bottom: 5px;
+    text-decoration: none;
+    position: relative;
+  @media screen and (max-width:1150px) {
+             @include text(8px, 'Oswald', $headerAndFooterTextColor, normal);
+        }
+  
+
+    &:hover::after {
+        width: 100%;
+        left: 0;
+    }
+
+    &::after {
+        bottom: 0;
+        content: "";
+        display: block;
+        height: 2px;
+        left: 0;
+        position: absolute;
+        background: $underLineOrCrossOutTextColor;
+        transition: width .5s ease 0s, left .5s ease 0s;
+        width: 20px;
+    }
+}
+
+.MenuTopicks {
+    display: flex;
+    margin-top: 10px;
+    flex-wrap: wrap;
+
+    &>a {
+        @include text(16px, 'Oswald', $headerAndFooterTextColor, normal);
+        letter-spacing: .25em;
+        display: inline-block;
+        padding-bottom: 5px;
+        margin-left: 25px;
+        margin-top: 10px;
+        position: relative;
+        text-decoration: none;
+          @media screen and (max-width:1150px) {
+             @include text(8px, 'Oswald', $headerAndFooterTextColor, normal);
+        }
+
+
+
+        &:hover::after {
+            width: 100%;
+            right: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 2px;
+            right: 0;
+            position: absolute;
+            background: $underLineOrCrossOutTextColor;
+            transition: width .5s ease 0s, left .5s ease 0s;
+            width: 20px;
+        }
+    }
+}
+
+.HeaderMiddle {
+    @include flexy (center, center);
+    flex-direction: column;
+}
+
+.HeaderMiddleBigText {
+    @include text(64px, 'Oswald', $headerAndFooterTextColor, italic);
+    text-align: center;
+
+    @media screen and (max-width:650px) {
+        @include text(44px, 'Oswald', $headerAndFooterTextColor, normal);
+    }
+}
+
+.HeaderMiddleMediumText {
+    margin-top: 5vh;
+    text-align: center;
+    @include text(24px, 'Oswald', $headerAndFooterTextColor, normal);
+
+    @media screen and (max-width:650px) {
+        @include text(20px, 'Oswald', $headerAndFooterTextColor, normal);
+    }
+}

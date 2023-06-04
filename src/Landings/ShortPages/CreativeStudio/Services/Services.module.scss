@@ -1,0 +1,33 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.ServiceBG {
+    background-color: $secondMainBackGroundColor;
+    min-height: 80vh;
+    @include flexy (center, '');
+
+    .ServiceBox {
+        width: 60%;
+        @include flexy (center, '');
+        flex-direction: column;
+    }
+}
+
+.ServiceMain {
+    @include flexy(center, '');
+    flex-wrap: wrap;
+}
+
+.ServiceHead {
+    @include text(48px, 'Oswald', $mainHeadlineTextColor, normal);
+    margin-bottom: 50px;
+
+    &::after {
+        content: '';
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 2px;
+        background: $mainHeadlineTextColor;
+    }
+}

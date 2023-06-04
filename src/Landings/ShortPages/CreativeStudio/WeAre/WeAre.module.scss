@@ -1,0 +1,163 @@
+@import '../assets/SASS/mixins.scss';
+@import '../assets/SASS/variabls.scss';
+
+.WeBackGround {
+    background-color: $firstMainBackGroundColor;
+    min-height: 100vh;
+    @include flexy (center, center);
+
+    @media screen and (max-width:913px) {
+        min-height: 60vh;
+    }
+
+    .WeBox {
+        width: 60%;
+        position: relative;
+
+        @media screen and (max-width:900px) {
+            width: 90%;
+        }
+    }
+}
+
+.WeTopick {
+    position: relative;
+    z-index: 10;
+    @include text(48px, 'Oswald', $mainHeadlineTextColor, normal);
+
+    @media screen and (max-width:470px) {
+        @include text(32px, 'Oswald', $mainHeadlineTextColor, normal);
+    }
+}
+
+.WeUnderTopick {
+    position: relative;
+    z-index: 10;
+    @include text(32px, 'Oswald', $mainHeadlineTextColor, normal);
+
+    @media screen and (max-width:470px) {
+        @include text(20px, 'Oswald', $mainHeadlineTextColor, normal);
+    }
+}
+
+.WeTopText {
+    position: relative;
+    @include text(14px, 'Oswald', $mainGeneralTextColor, normal);
+    width: 260px;
+    z-index: 10;
+
+    @media screen and (max-width:470px) {
+        @include text(10px, 'Oswald', $mainGeneralTextColor, normal);
+    }
+
+    &:before {
+        content: '';
+        display: block;
+        position: relative;
+        width: 20px;
+        height: 2px;
+        right: 25px;
+        top: 11px;
+        background: $mainHeadlineTextColor;
+    }
+}
+
+
+.WeTopTextBox {
+    position: relative;
+}
+
+.ImgBox {
+    position: absolute;
+    width: 320px;
+    height: 400px;
+    top: -10vh;
+    left: 30vh;
+
+    @media screen and (max-width:913px) {
+        position: static;
+        width: 260px;
+        height: 330px;
+    }
+
+}
+
+.WeFirstImgBox {
+    background: url('../assets/img/WeAreTopImg.png') no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    right: 20vh;
+    bottom: 10vh;
+    z-index: 5;
+
+    @media screen and (max-width:913px) {
+        right: unset;
+        bottom: unset;
+        width: 260px;
+        height: 330px;
+    }
+}
+
+.WeGreenBox {
+    background: $underLineOrCrossOutTextColor;
+    width: 309px;
+    height: 391px;
+    position: absolute;
+    z-index: 4;
+    opacity: 90%;
+
+    @media screen and (max-width:1000px) {
+        width: 0;
+    }
+}
+
+.WeSecondImgBox {
+    background: url('../assets/img/WeAreBottomImg.png') no-repeat;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 20vh;
+    top: 10vh;
+
+    @media screen and (max-width:1000px) {
+        width: 0;
+    }
+
+}
+
+.BotBoxTex {
+    display: flex;
+    justify-content: flex-end;
+
+    .WeBottomTextBox {
+        position: relative;
+        width: 260px;
+        z-index: 10;
+        top: 10vh;
+        left: 5vh;
+        @include text(14px, 'Oswald', $mainGeneralTextColor, normal);
+
+        @media screen and (max-width:470px) {
+            @include text(8px, 'Oswald', $mainGeneralTextColor, normal);
+            top: initial;
+            left: initial;
+        }
+
+        @media screen and (max-width:913px) {
+            top: unset;
+            left: unset;
+        }
+
+        &:before {
+            content: '';
+            display: block;
+            position: relative;
+            width: 20px;
+            height: 2px;
+            right: 25px;
+            top: 11px;
+            background: $mainHeadlineTextColor;
+        }
+    }
+}
