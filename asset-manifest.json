@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/Landings/static/css/main.9eb17a74.css",
+    "main.js": "/Landings/static/js/main.90260932.js",
+    "static/media/backgroundHeaderImg.png": "/Landings/static/media/backgroundHeaderImg.e309c4cdbd78990bf9bf.png",
+    "static/media/LWKitty.png": "/Landings/static/media/LWKitty.2d0d156441c6c15bc445.png",
+    "static/media/LWPhoto.png": "/Landings/static/media/LWPhoto.ee74ecbf10f5dccc8ac9.png",
+    "static/media/member2.png": "/Landings/static/media/member2.894d5d4451a9b9a0a707.png",
+    "static/media/member1.png": "/Landings/static/media/member1.dd280348d84b679ee0b2.png",
+    "static/media/LWButtons.png": "/Landings/static/media/LWButtons.6162a4952025851523df.png",
+    "static/media/BackGround.jfif": "/Landings/static/media/BackGround.163e1c00d1adac1ec341.jfif",
+    "static/media/Oswald-Medium.woff2": "/Landings/static/media/Oswald-Medium.516c1aa23fc45784b68d.woff2",
+    "static/media/member3.png": "/Landings/static/media/member3.e463c5d7d8f698a2e02d.png",
+    "static/media/LWMac.png": "/Landings/static/media/LWMac.e6198ca8715f1f6c34e1.png",
+    "static/media/Oswald-Medium.woff": "/Landings/static/media/Oswald-Medium.26d40b197585983e5806.woff",
+    "static/media/WeAreTopImg.png": "/Landings/static/media/WeAreTopImg.5d046204c49f4daf3283.png",
+    "static/media/WeAreBottomImg.png": "/Landings/static/media/WeAreBottomImg.db41be3b1c01c0a2dc49.png",
+    "static/media/Development.svg": "/Landings/static/media/Development.b575d1ccc441974043c4c5e482c2d037.svg",
+    "static/media/Design.svg": "/Landings/static/media/Design.8d51b24687f6ee0a7041d30ac877ce6e.svg",
+    "static/media/Branding.svg": "/Landings/static/media/Branding.6881a2537e1b4523f56b91fd4a8b4ba3.svg",
+    "static/media/StarComplete.svg": "/Landings/static/media/StarComplete.b29a6ae5c682af940a53f1b4812fe2c5.svg",
+    "static/media/StarEmpty.svg": "/Landings/static/media/StarEmpty.b0840a2c48e4ae01de447377cd7205ad.svg",
+    "index.html": "/Landings/index.html",
+    "main.9eb17a74.css.map": "/Landings/static/css/main.9eb17a74.css.map",
+    "main.90260932.js.map": "/Landings/static/js/main.90260932.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9eb17a74.css",
+    "static/js/main.90260932.js"
+  ]
+}
