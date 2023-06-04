@@ -7,7 +7,7 @@ function App() {
   return (
     <BrowserRouter>
     <Routes>
-      <Route path='/' Component={Main} />
+      <Route path='/*' Component={Main} />
       <Route path='/CreativeStudio' Component={CreativeStudio} />
       </Routes>
     </BrowserRouter>
